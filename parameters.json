@@ -1,0 +1,25 @@
+{
+  "tracking_script": "./baseline.py",
+  "dataset_to_detections_mapping": "ASMS_experements/Configs/datasets_to_markup.json",
+  "dataset_to_markup_mapping": "ASMS_experements/Configs/datasets_to_markup.json",
+  "base_parameters": {
+    "tracking_plugin_docker_image": "vt_asms",
+    "min_track_detections": 3,
+    "object_type": "car_lp",
+    "detection_type": "lp",
+    "detection_confidence_threshold": 0.90,
+    "iou_threshold": 0.3,
+    "max_seconds_not_tracked": 2
+  },
+  "grid_parameters": [
+    {
+      "min_seconds_between_detections": [
+        0.1, 0.05, 0.2
+      ],
+      "min_seconds_between_vt": [
+           0.0, 0.01, 0.05
+       ]
+    }
+  ],
+  "matching": "-o car_lp -d lp --metric bbox_iou --threshold 0.3"
+}
