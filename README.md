@@ -1,2 +1,6 @@
-# SortLike_MOT_Tracker
-Tracking by detection method for MOT
+# Simple MOT Tracker
+Simple tracker:
+* Detection on keyframes
+* Visual tracking between keyframes
+
+
